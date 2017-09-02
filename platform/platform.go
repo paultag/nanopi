@@ -10,7 +10,7 @@ var (
 	serialFile string = "/proc/device-tree/serial-number"
 )
 
-//
+// Return the Serial in a byte array.
 func Serial() ([]byte, error) {
 	fd, err := os.Open(serialFile)
 	if err != nil {
