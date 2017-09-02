@@ -2,7 +2,7 @@ Source: nanopi
 Section: devel
 Priority: extra
 Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
-Uploaders: Paul Tagliamonte <paultag@paultag.org>
+Uploaders: Paul Tagliamonte <paultag@debian.org>
 Build-Depends: debhelper (>= 10),
                dh-golang,
                golang-any,
