@@ -1,0 +1,11 @@
+[Unit]
+Description=Set a deterministic MAC
+Wants=network-pre.target
+Before=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/set-emac
+
+[Install]
+WantedBy=multi-user.target
