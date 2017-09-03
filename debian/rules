@@ -2,3 +2,7 @@
 
 %:
 	dh $@ --buildsystem=golang --with=golang,systemd
+
+override_dh_auto_install:
+	dh_auto_install
+	rm -vrf debian/set-emac/usr/share/gocode/
