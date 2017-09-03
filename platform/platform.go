@@ -16,6 +16,7 @@ func Serial() ([]byte, error) {
 	if err != nil {
 		return nil, err
 	}
+	defer fd.Close()
 
 	d, err := ioutil.ReadAll(fd)
 	if err != nil {
