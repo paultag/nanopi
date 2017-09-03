@@ -29,7 +29,7 @@ func GetLED(led LED) (bool, error) {
 		return false, err
 	}
 
-	return (bytes.Compare(data, []byte{'0'}) == 0), nil
+	return !(bytes.Compare(data, []byte{'0', '\n'}) == 0), nil
 }
 
 func SetLED(led LED, power bool) error {
