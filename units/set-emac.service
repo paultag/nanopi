@@ -2,6 +2,7 @@
 Description=Set a deterministic MAC
 Wants=network-pre.target
 Before=network-pre.target
+Documentation=man:set-emac(1)
 
 [Service]
 Type=oneshot
