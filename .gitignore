@@ -1,2 +1,11 @@
 *.swp
 obj-*/
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/set-emac.debhelper.log
+debian/set-emac.postinst.debhelper
+debian/set-emac.postrm.debhelper
+debian/set-emac.prerm.debhelper
+debian/set-emac.substvars
+debian/set-emac/
