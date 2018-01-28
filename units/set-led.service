@@ -1,0 +1,12 @@
+[Unit]
+Description=do an led thing
+Wants=network-pre.target
+Before=network-pre.target
+Documentation=man:set-led(1)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/set-led --heartbeat
+
+[Install]
+WantedBy=multi-user.target
