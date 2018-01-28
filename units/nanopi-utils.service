@@ -1,11 +1,8 @@
 [Unit]
 Description=do an led thing
-Wants=network-pre.target
-Before=network-pre.target
 Documentation=man:set-led(1)
 
 [Service]
-Type=notify
 ExecStart=/usr/bin/set-led --heartbeat
 
 [Install]
