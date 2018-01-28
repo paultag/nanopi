@@ -33,7 +33,7 @@ func GetLED(led LED) (bool, error) {
 }
 
 func SetLED(led LED, power bool) error {
-	fd, err := os.Create(ledPath(led))
+	fd, err := WriteLED(led)
 	if err != nil {
 		return err
 	}
@@ -44,4 +44,8 @@ func SetLED(led LED, power bool) error {
 	}
 	_, err = fd.Write([]byte(d))
 	return err
+}
+
+func WriteLED(led LED) (*os.File, error) {
+	return os.Create(ledPath(led))
 }
