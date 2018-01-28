@@ -18,8 +18,12 @@ func ledPath(led LED) string {
 	return fmt.Sprintf("/sys/class/leds/%s/brightness", led)
 }
 
+func LEDFile(led LED) (*os.File, error) {
+	return os.Open(ledPath(led))
+}
+
 func GetLED(led LED) (bool, error) {
-	fd, err := os.Open(ledPath(led))
+	fd, err := LEDFile(led)
 	if err != nil {
 		return false, err
 	}
@@ -33,7 +37,7 @@ func GetLED(led LED) (bool, error) {
 }
 
 func SetLED(led LED, power bool) error {
-	fd, err := os.Create(ledPath(led))
+	fd, err := LEDFile(led)
 	if err != nil {
 		return err
 	}
