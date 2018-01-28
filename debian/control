@@ -25,6 +25,14 @@ Description: deterministcally set the MAC on a sunxi8
  in /proc/device-tree/serial) on boot, using an organizationally unique
  MAC address.
 
+Package: set-hostname
+Architecture: armhf
+Built-Using: ${misc:Built-Using}
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: deterministcally set the hostname on a sunxi8
+ eeks
+
 Package: nanopi-utils
 Architecture: armhf
 Built-Using: ${misc:Built-Using}

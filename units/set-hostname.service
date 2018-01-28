@@ -1,0 +1,12 @@
+[Unit]
+Description=Set a deterministic MAC
+Wants=network-pre.target
+Before=network-pre.target
+Documentation=man:set-hostname(1)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/set-hostname
+
+[Install]
+WantedBy=multi-user.target
