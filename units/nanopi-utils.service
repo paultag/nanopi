@@ -5,7 +5,7 @@ Before=network-pre.target
 Documentation=man:set-led(1)
 
 [Service]
-Type=oneshot
+Type=notify
 ExecStart=/usr/bin/set-led --heartbeat
 
 [Install]
